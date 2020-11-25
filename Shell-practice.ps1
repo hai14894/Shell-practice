@@ -36,3 +36,4 @@ do {
         $pathVerified = $true
     }
 } while ($pathVerified -eq $false)
+
