@@ -11,3 +11,11 @@ foreach ($process in $processes){
         $largeProcesses2 += $process
     }
 }
+
+################################
+#ForEach-Object
+
+$path = 'Downloads'
+$folderCount = 0
+Get-ChildItem $path | ForEach-Object -Process { if ($_.PSIsContainer) { $folderCount ++ } }
+Write-Host " $folderCount folder(s) in $path directory"
